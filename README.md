@@ -5,6 +5,28 @@ _This README was derived from [our post on Medium](https://medium.com/megabits-l
 
 Recently, we released [SIOSocket](https://github.com/megabits/siosocket), an open source Objective-C client for [socket.io 1.0.4](http://socket.io/blog/introducing-socket-io-1-0/). Our last post was all about the motivation for and implementation of SIOSocket, but in this post, we’re building a thing!
 
+## Quick Start ##
+If you just want to get the project up and running.  Execute the following terminal commands and steps in this quick start section.
+
+```
+$ git clone https://github.com/aln787/WorldPin.git
+$ cd worldPin/
+$ pod install
+$ open WorldPin.xcworkspace
+$ cd world_pin_server/
+$ npm install
+$ node app.js
+```
+- In ViewController.m update ```<your IP address>``` to your computer's IP address.
+- Run the iOS application on a connected device and on the simulator at the same time.
+- In the shell where app.js is running confirm that connection events and location data are being logged (example response below).
+
+![example response ](images/sampleServerLog.png)
+
+- In the iOS applications confirm that you can see the pin showing the other devices location on the map.
+
+# Step By Step Guide #
+
 ## Node.js App ##
 
 The socket.io implementation of the backend server of this app is rather simple. First, let’s start by building our Node’s package.json file.
